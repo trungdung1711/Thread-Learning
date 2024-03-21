@@ -45,5 +45,6 @@ int main(int argc, char**argv)
         sleep(1);
     }
     pthread_join(tid,NULL);
+    pthread_join(tid2,NULL);
 
 }
