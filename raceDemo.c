@@ -31,6 +31,6 @@ int main(int argc, char** argv)
     pthread_join(tid1,NULL);
     pthread_join(tid2,NULL);
 
-    printf(shared_memory);
+    printf("The value of shared_memory is %d",shared_memory);
     return 0;
 }
