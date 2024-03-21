@@ -4,7 +4,7 @@
 
 void* routine(void* param)
 {
-    printf("Text from thread1 1\n");
+    printf("Text from thread 1\n");
     sleep(20);
     printf("Ending thread 1\n");    
 }
