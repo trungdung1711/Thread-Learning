@@ -5,7 +5,7 @@
 
 void* routine1(void* param)
 {
-    for (int i = 0 ; i < 20 ; ++i)
+    for (int i = 0 ; i < 5 ; ++i)
     {
         printf("THREAD 1\n");
         sleep(4);
@@ -34,6 +34,10 @@ int main()
     for (int i = 0 ; i < 2 ; ++i)
     {
         pthread_create(&tid[i],&attr,&routine1,NULL);
+    }
+
+    for (int i = 0 ; i < 2 ; ++i)
+    {
         pthread_join(tid[i],NULL);
     }
     return 0;
