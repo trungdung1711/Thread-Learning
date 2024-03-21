@@ -29,9 +29,9 @@ int main()
         sleep(1);
     }
 
-    void** result;
-    pthread_join(tid,result);
-    int** resultPrime = (int**)result;
-    printf("Value after executing is %d", **resultPrime);
-    return 0;
+    void* result;
+    void** resultPrime = &result;
+    pthread_join(tid,resultPrime);
+    printf("Value is %d", *((int*)result));
+
 }
