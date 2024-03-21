@@ -30,5 +30,6 @@ int main(int argc, char**argv)
         printf("Main thread\n");
         sleep(1);
     }
+    pthread_join(tid,NULL);
 
 }
